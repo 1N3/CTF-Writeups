@@ -24,9 +24,10 @@ Vary: Accept-Encoding
 Connection: close
 Content-Type: text/html
 
+```
 <html><head></style><audio autoplay loop><source src="./Saw theme song.mp3" type="audio/mpeg"></audio>
 <title>Cr@pT0l0cK3r</title></head><body background="./matrix-animated-image.gif"></body><center><h1 style=color:red;>U h@v3 b33n h1T by Cr@pT0l0cK3r!</h1><h2 style=color:green;>P@y 1.337 dr0pco1ns 2 @cc0unT: 5318008 1n 1 w33k t0 g3T ur d@T@z b@cK!</h4><img  src="./Hacker.png"><h3 style=color:grey; >*****i l0cK3d ur cr@p******</h1><p style=color:grey; >Gr33Tz to--> TrumpLuV3r, m0l3z, s1Lv10, k0aLaz, Joey Jojo Jr Shabadoo, Team-Barbie, Team Blue Ballz, ASD </p></center><!-- Page made by dr0ppyb3@r_h@ck3r -></html>
-
+```
 
 
 flag{dr0ppyb3@r_h@ck3r}
@@ -60,7 +61,7 @@ Content-Length: 901
 Connection: close
 Content-Type: text/html; charset=UTF-8
 
-<html>
+```<html>
 <body>
 <center>
 <h2>Koala Gallery</h2>
@@ -80,7 +81,7 @@ Content-Type: text/html; charset=UTF-8
 <img src="carl.jpg" alt="Carl" style="width:250px;height:250px;">
 </center>
 </body>
-</html>
+</html>```
 
 
 
