@@ -139,6 +139,8 @@ for i in range(num):
     
 ```
 
+Running the exploit revealed the flag..
+
 ```html
 root@blackhat:/pentest/development/python# python md5sum.py 
 bob = 9f9d51bc70ef21ca5c14f307980a29d8
