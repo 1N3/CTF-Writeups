@@ -1,7 +1,7 @@
 # CTF-Writeups
 
 ## CrikeyConCTF Crapto Locker (100pts)
-
+---
 The following web page was left by a hacker, who is using ransomware to hold my web site hostage. I am a poor student and can't affort to pay the ransom. Can you help?
 
 http://ctf.crikeycon.com:1234
@@ -34,7 +34,7 @@ flag{dr0ppyb3@r_h@ck3r}
 
 
 ## CrikeyConCTF Koala Web Challenge (200pts)
-
+---
 Get the flag from this fine collection of bears.
 
 http://ctf.crikeycon.com:8001
@@ -90,7 +90,7 @@ e01096b9ffe3f416157f6ec46c467725  -
 ```
 
 
-```
+```python
 ### CrikeyCon CTF Koala Gallery Exploit by 1N3@CrowdShield
 ### https://crowdshield.com 
 
@@ -463,7 +463,7 @@ flag{dr0ppy_the_dr0pb34r}
 
 
 ## CrikeyConCTF Eyeless Web Challenge (200pts)
-
+---
 Retrieve the admin password
 
 http://ctf.crikeycon.com:8003
